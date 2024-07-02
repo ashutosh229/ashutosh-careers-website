@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Career Pad</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      <style>
+          .custom-grey {
+              color: #6c757d; /* Greyish color for heading */
+          }
+          .custom-image {
+              width: 90%; /* Adjust the width to be a little less than full width */
+              margin: 0 auto; /* Center the image horizontally */
+              display: block; /* Ensure the image is displayed as a block element */
+          }
+          .custom-text-black {
+              color: black; /* Set text color to black */
+          }
+          .btn-primary {
+              transition: background-color 0.3s ease; /* Smooth transition effect */
+          }
+          .btn-primary:hover {
+              background-color: #6c757d; /* Greyish color on hover */
+          }
+      </style>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col text-center">
+                <h1 class="text-secondary">Welcome To Career Pad</h1>
+            </div>
+        </div>
+      <div class="row justify-content-center">
+          <div class="col text-center">
+              <img src="https://cb611ea9-dfef-4d5d-a78c-41e08e211b0b-00-9wmjjf4fdvba.pike.replit.dev/static/banner.jpg" alt="Banner of the website" width="90%" margin="0 auto" display="block" height="200px">
+          </div>
+      </div>
+      <div class="row justify-content-center">
+          <div class="col text-center">
+              <h2 class="text-secondary">About Career Pad</h2>
+          </div>
+      </div>
+      <div class="row justify-content-center">
+          <div class="col text-center">
+              <p>This is a website for all the job seekers who are in the field of developement and data science. Here they can get all the job postings and complete information about all the stuffs</p>
+          </div>
+      </div>
+        <div class="row justify-content-center">
+              <div class="col text-center">
+                  <h2 class="text-secondary">Job Openings</p>
+              </div>
+          </div>
+        <div class="row justify-content-center">
+              <div class="col text-center">
+                  <div class="container">
+                      {% for job in jobs %}
+                      <div class="row mb-3">
+                          <div class="col-md-10 text-start">
+                              <h4 class="text-secondary">{{ job["title"] }}</h4>
+                              <div><b>Location</b>: {{ job["location"] }}</div>
+                              <div><b>Salary</b>: {{ job["salary"] }}</div>
+                          </div>
+                          <div class="col-md-2 d-flex align-items-center">
+                              <button class="btn btn-primary">Apply</button>
+                          </div>
+                      </div>
+                      {% if not loop.last %}
+                          <hr>
+                      {% endif %}
+                      {% endfor %}
+                  </div>
+
+              </div>
+          </div>
+        <div class="row justify-content-center">
+              <div class="col text-center">
+                  <button type="button" class="btn btn-primary">Contact Us</button>
+              </div>
+          </div>
+        <div class="row justify-content-center">
+              <div class="col text-center">
+                  <p>Copywright 22, Ashutosh</p>
+              </div>
+          </div>
+    </div>
+    
+    
+    
+    
+    
+    
+  </body>
+</html>

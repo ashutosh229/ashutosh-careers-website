@@ -1,0 +1,17 @@
+<div class="container">
+    {% for job in jobs %}
+    <div class="row mb-3">
+        <div class="col-md-10 text-start">
+            <h4 class="text-secondary">{{ job["title"] }}</h4>
+            <div><b>Location</b>: {{ job["location"] }}</div>
+            <div><b>Salary</b>: {{ job["salary"] }}</div>
+        </div>
+        <div class="col-md-2 d-flex align-items-center">
+            <a href="mailto:akumarjha875@gmail.com?subject=Application for the role of {{job["title"]}}&body=Dear%20Hiring%20Manager%2C%0D%0A%0D%0AI%20am%20writing%20to%20apply%20for%20the%20position%20of%20Software%20Engineer.%0D%0A%0D%0A%0D%0ASincerely%2C%0D%0AYour%20Name" type="button" class="btn btn-outline-primary">Email Us</a>
+        </div>
+    </div>
+    {% if not loop.last %}
+        <hr>
+    {% endif %}
+    {% endfor %}
+</div>
